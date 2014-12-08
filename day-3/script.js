@@ -1,12 +1,12 @@
 $(function() {
-	function clock() {
+	var clock = function() {
 		var date = new Date(),
 		hh = date.getHours(),
 		mm = date.getUTCMinutes(),
 		ss = date.getUTCSeconds(),
-		hh = checkTime(hh),
-		mm = checkTime(mm),
-		ss = checkTime(ss);
+		hh = formatTime(hh),
+		mm = formatTime(mm),
+		ss = formatTime(ss);
 		color = timeColor(hh, mm, ss);
 
 		// converts 24H to 12H
@@ -19,14 +19,14 @@ $(function() {
 		// $('body').css('background-color', '#'+hexClock);
 	}
 	// This will add a zero in front of the mm and ss
-	function checkTime(i) {
+	function formatTime(i) {
     if (i<10)
     	{i = '0' + i};
     return i;
 	}
 
 	//This will properly format hex
-	function formatColor(i) {
+	function formatHex(i) {
 		if (i.length < 2) {
 			i = '0' + i;
 		}
@@ -39,9 +39,9 @@ $(function() {
 		green = Math.floor(255*(min/59)).toString(16);
 		blue = Math.floor(255*(sec/59)).toString(16);
 
-		red = formatColor(red);
-		green = formatColor(green);
-		blue = formatColor(blue);
+		red = formatHex(red);
+		green = formatHex(green);
+		blue = formatHex(blue);
 
 		return (red + green + blue).toUpperCase();
 	}
@@ -52,6 +52,5 @@ $(function() {
 		$('#hex-color').html(color);
 	}
 
-	setInterval(clock, 1000);
-	setInterval(bgHexColor, 1000);
+	interval = setInterval(function(){clock(), bgHexColor()}, 1000);
 });
