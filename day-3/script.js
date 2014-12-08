@@ -1,5 +1,5 @@
 $(function() {
-	var clock = function() {
+	function clock() {
 		var date = new Date(),
 		hh = date.getHours(),
 		mm = date.getUTCMinutes(),
@@ -9,35 +9,35 @@ $(function() {
 		ss = formatTime(ss);
 		color = timeColor(hh, mm, ss);
 
-		// converts 24H to 12H
+	// converts 24H to 12H
     if (hh > 12)
     	hh -= 12;
 
 		var hexClock = hh.toString() +':'+ mm.toString() +':'+ ss.toString();
-		// var hexClock = Math.floor(255*(hh/23)).toString(16)+Math.floor(255*(mm/59)).toString(16)+ Math.floor(255*(ss/59)).toString(16);
+	// var hexClock = Math.floor(255*(hh/23)).toString(16)+Math.floor(255*(mm/59)).toString(16)+ Math.floor(255*(ss/59)).toString(16);
 		$('#h').html(hexClock);
-		// $('body').css('background-color', '#'+hexClock);
 	}
-	// This will add a zero in front of the mm and ss
+	// This will add a zero in front of the hour, minute or second if it's a single digit
 	function formatTime(i) {
-    if (i<10)
-    	{i = '0' + i};
+    if (i<10) {
+    	i='0'+i
+    }
     return i;
 	}
 
 	//This will properly format hex
 	function formatHex(i) {
-		if (i.length < 2) {
-			i = '0' + i;
+		if (i.length<2) {
+			i='0'+i;
 		}
 		return i;
 	}
 
 	// Converts the time to hexidecimal color
 	function timeColor(hour, min, sec) {
-		red = Math.floor(255*(hour/23)).toString(16);
-		green = Math.floor(255*(min/59)).toString(16);
-		blue = Math.floor(255*(sec/59)).toString(16);
+		var red = Math.floor(255*(hour/23)).toString(16),
+				green = Math.floor(255*(min/59)).toString(16),
+				blue = Math.floor(255*(sec/59)).toString(16);
 
 		red = formatHex(red);
 		green = formatHex(green);
@@ -52,5 +52,8 @@ $(function() {
 		$('#hex-color').html(color);
 	}
 
-	interval = setInterval(function(){clock(), bgHexColor()}, 1000);
+	interval = setInterval(function() {
+		clock(),
+		bgHexColor()
+	}, 1000);
 });
