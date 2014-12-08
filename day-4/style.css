@@ -24,3 +24,6 @@ dt {
 	border-top: 1px solid #fff;
 }
 
+.hide {
+	display: none;
+}
