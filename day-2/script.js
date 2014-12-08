@@ -6,3 +6,5 @@ $(function() {
 		$('body').css('background-color','rgb('+randomColor()+','+randomColor()+','+randomColor()+')');
 	});
 });
+
+
