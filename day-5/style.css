@@ -1,0 +1,119 @@
+.container {
+	width: 100%;
+}
+
+.controller-body {
+	width: 575px;
+	height: 202.5px;
+	border: 1px solid black;
+}
+
+.d-pad-container {
+	margin-top: 50px;
+	margin-left: 27.5px;
+	border: 1px solid black;
+	width: 125px;
+	height: 125px;
+}
+
+.b-button,
+.a-button {
+	width: 70px;
+	height: 70px;
+}
+
+.start-select {
+	width: 177.5px;
+	height: 62.5px;
+}
+
+/* d pad cross */
+
+#d-pad {
+   width: 100px;
+   height: 100px;
+   margin: 12px auto;
+   position: relative;
+}
+
+#d-pad:before, #d-pad:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #000;
+}
+
+#d-pad:before {
+  left: 48%;
+  width: 35%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+#d-pad:after {
+  top: 48%;
+  height: 35%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+#d-pad-dimple {
+	width: 27px;
+	height: 27px;
+	border: 1px solid white;
+	position: absolute;
+	left: 36px;
+	top: 36px;
+	border-radius: 100px;
+}
+
+/*#d-pad-up {
+	width: 0;
+	height: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 26px solid red;
+	position: absolute;
+	left: 30px;
+	top: 5px;
+}
+#d-pad-up:before {
+	content: '';
+	position: absolute;
+	left: -50px;
+	top: 50px;
+	width: 0;
+	height: 0;
+	border: 100px solid transparent;
+	border-top-color: red;
+
+   width: 120px;
+   height: 80px;
+   background: red;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+}*/
+
+
+#d-pad-up {
+   width: 14px;
+   height: 20px;
+   background: red;
+   position: absolute;
+   top: 40px;
+   left: 14px;
+}
+#d-pad-up:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: -3px;
+   left: -12px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 12px solid red;
+   border-bottom: 13px solid transparent;
+}
