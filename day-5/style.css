@@ -1,11 +1,15 @@
 .container {
-	width: 100%;
+	width: 615px;
+	height: 270px;
+	border: 1px solid black;
 }
 
 .controller-body {
 	width: 575px;
-	height: 202.5px;
+	height: 205px;
 	border: 1px solid black;
+	margin: 33px auto;
+	/*background-color: black;*/
 }
 
 .d-pad-container {
@@ -14,6 +18,7 @@
 	/*border: 1px solid black;*/
 	width: 125px;
 	height: 125px;
+	float: left;
 }
 
 .b-button,
@@ -22,10 +27,67 @@
 	height: 70px;
 }
 
-.start-select {
+.middle-section {
+	width: 180px;
+	height: 100%;
+	float: left;
+	margin-left: 20px;
+}
+
+.gray-bar-top,
+.gray-bar {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.gray-bar,
+.gray-bar-bottom {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.gray-bar, 
+.gray-bar-top {
+	width: 177.5px;
+	height: 27.5px;
+	background-color: #c5c5c5;
+	margin-bottom: 10px;
+}
+
+.bottom-gray-bar {
+	width: 177.5px;
+	height: 20px;
+	background-color: #c5c5c5;
+}
+
+.start-select-container {
 	width: 177.5px;
 	height: 62.5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-bottom: 10px;
 }
+
+div.select, div.start {
+	padding: 5px 7px;
+}
+
+.select {
+	float: left;
+}
+
+.start {
+	float: right
+}
+
+.select-btn {
+
+}
+
+.start-btn {
+	
+}
+
 
 #d-pad-border {
    width: 125px;
@@ -91,28 +153,28 @@
 
 
 #d-pad-dimple {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	border: 1px solid white;
 	position: absolute;
-	left: 42px;
-	top: 42px;
+	left: 44px;
+	top: 44px;
 	border-radius: 100px;
 }
 
 #d-pad-left {
-	 width: 19px;
-	 height: 23px;
+	 width: 16px;
+	 height: 20px;
 	 background: red;
 	 position: absolute;
-	 top: 46px;
+	 top: 48px;
 	 left: 16px;
 }
 #d-pad-left:before {
 	 content:"";
 	 position: absolute;
 	 right: 100%;
-	 top: -3px;
+	 top: -5px;
 	 left: -13px;
 	 width: 0;
 	 height: 0;
@@ -122,19 +184,19 @@
 }
 
 #d-pad-right {
-   width: 19px;
-   height: 23px;
+   width: 16px;
+   height: 20px;
    background: red;
    position: absolute;
-   top: 46px;
+   top: 48px;
    left: 81px;
 }
 #d-pad-right:before {
    content:"";
    position: absolute;
    right: 100%;
-   top: -3px;
-   left: 16px;
+   top: -5px;
+   left: 14px;
    width: 0;
    height: 0;
    border-top: 15px solid transparent;
@@ -143,44 +205,44 @@
 }
 
 #d-pad-up {
-   width: 23px;
-   height: 14px;
+   width: 20px;
+   height: 17px;
    background: red;
    position: absolute;
-   top: 14px;
-   left: 39px;
+   top: 16px;
+   left: 48px;
 }
 #d-pad-up:before {
 	content:"";
 	position: absolute;
 	right: 100%;
 	top: -12px;
-	left: -3px;
+	left: -5px;
 	width: 0;
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-bottom: 13px solid red;
+	border-bottom: 15px solid red;
 }
 
 #d-pad-down {
-	width: 23px;
-	height: 14px;
+	width: 20px;
+	height: 17px;
 	background: red;
 	position: absolute;
-	top: 71px;
-	left: 39px;
+	top: 81px;
+	left: 48px;
 }
 #d-pad-down:before {
 	content:"";
 	position: absolute;
 	right: 100%;
-	top: 13px;
-	left: -3px;
+	top: 15px;
+	left: -5px;
 	width: 0;
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-top: 13px solid red;
+	border-top: 15px solid red;
 }
 
