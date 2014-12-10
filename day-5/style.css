@@ -11,7 +11,7 @@
 .d-pad-container {
 	margin-top: 50px;
 	margin-left: 27.5px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	width: 125px;
 	height: 125px;
 }
@@ -122,24 +122,24 @@
 }
 
 #d-pad-right {
-   width: 14px;
-   height: 20px;
+   width: 19px;
+   height: 23px;
    background: red;
    position: absolute;
-   top: 40px;
-   left: 70px;
+   top: 46px;
+   left: 81px;
 }
 #d-pad-right:before {
    content:"";
    position: absolute;
    right: 100%;
    top: -3px;
-   left: 14px;
+   left: 16px;
    width: 0;
    height: 0;
-   border-top: 13px solid transparent;
-   border-left: 12px solid red;
-   border-bottom: 13px solid transparent;
+   border-top: 15px solid transparent;
+   border-bottom: 15px solid transparent;
+   border-left: 15px solid red;
 }
 
 #d-pad-up {
