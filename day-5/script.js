@@ -51,7 +51,6 @@ $(function() {
 		if (arr.length === 11) {
 			codeConfirmed(arr);
 		}
-
 	});
 	$('.d-pad-right').on('mouseup', function() {
 		$(this).removeClass('btn-activate-right');
@@ -71,7 +70,7 @@ $(function() {
 	});
 
 	$('.d-pad-left').on('mousedown', function() {
-		$(this).addClass('btn-activate');
+		$(this).addClass('btn-activate-left');
 		var btnText = $(this).data('button');
 		arr.push(btnText);
 		$('.cheat-code-area').text(arr.join(' '));
@@ -80,7 +79,7 @@ $(function() {
 		}
 	});
 	$('.d-pad-left').on('mouseup', function() {
-		$(this).removeClass('btn-activate');
+		$(this).removeClass('btn-activate-left');
 	});
 
 	$('.select-btn, .start-btn').on('mousedown', function() {

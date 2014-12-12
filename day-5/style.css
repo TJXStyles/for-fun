@@ -112,7 +112,7 @@ body {
 .d-pad-left {
 	 width: 16px;
 	 height: 20px;
-	 background: white;
+	 background: black;
 	 position: absolute;
 	 top: 48px;
 	 left: 16px;
@@ -126,15 +126,35 @@ body {
 	 width: 0;
 	 height: 0;
 	 border-top: 15px solid transparent;
-	 border-right: 15px solid white;
+	 border-right: 15px solid black;
 	 border-bottom: 15px solid transparent;
-	 /*box-shadow: -1px -1px 10px -2px rgba(0,0,0,0.5);*/
+}
+
+.d-pad-left-border {
+	 width: 17px;
+	 height: 22px;
+	 background: gray;
+	 position: absolute;
+	 top: 47px;
+	 left: 16px;
+}
+.d-pad-left-border:before {
+	 content:"";
+	 position: absolute;
+	 right: 100%;
+	 top: -6px;
+	 left: -14px;
+	 width: 0;
+	 height: 0;
+	 border-top: 17px solid transparent;
+	 border-right: 17px solid gray;
+	 border-bottom: 17px solid transparent;
 }
 
 .d-pad-right {
    width: 16px;
    height: 20px;
-   background: red;
+   background: black;
    position: absolute;
    top: 48px;
    left: 81px;
@@ -149,7 +169,29 @@ body {
    height: 0;
    border-top: 15px solid transparent;
    border-bottom: 15px solid transparent;
-   border-left: 15px solid red;
+   border-left: 15px solid black;
+}
+
+.d-pad-right-border {
+   width: 17px;
+   height: 22px;
+   background: gray;
+   position: absolute;
+   top: 47px;
+   left: 80px;
+   z-index: 0;
+}
+.d-pad-right-border:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: -7px;
+   left: 14px;
+   width: 0;
+   height: 0;
+   border-top: 18px solid transparent;
+   border-bottom: 18px solid transparent;
+   border-left: 18px solid gray;
 }
 
 .d-pad-up {
@@ -389,7 +431,10 @@ body {
 	top: -5px;
 }
 
-.btn-activate-up {
+.btn-activate-up,
+.btn-activate-left,
+.btn-activate-down,
+.btn-activate-right  {
 	background-color: gray;
 }
 
@@ -397,13 +442,19 @@ body {
 	border-bottom: 15px solid gray;
 }
 
-.btn-activate-down {
-	background-color: gray;
-}
-
 .btn-activate-down:before {
 	border-top: 15px solid gray;
 }
+
+.btn-activate-right:before {
+	border-left: 15px solid gray;
+}
+
+.btn-activate-left:before {
+	border-right: 15px solid gray;
+}
+
+
 
 .d-pad-left,
 .d-pad-right,
