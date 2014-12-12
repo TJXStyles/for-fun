@@ -1,7 +1,21 @@
+/* Nintendo Font
+font-family: 'Press Start 2P', cursive;
+*/
+@font-face {
+  font-family: 'pretendo';
+  src: url(Pretendo.ttf) format('truetype');
+}
+
+body {
+	color: #D20014;
+	font-family: 'pretendo', sans-serif;
+}
+
 .container {
 	width: 615px;
 	height: 270px;
-	border: 1px solid black;
+	border: 1px solid rgb(208,204,202);
+	background-color: rgb(208,204,202);
 }
 
 .controller-body {
@@ -9,91 +23,24 @@
 	height: 205px;
 	border: 1px solid black;
 	margin: 33px auto;
-	/*background-color: black;*/
+	background-color: black;
 }
 
 .d-pad-container {
 	margin-top: 50px;
-	margin-left: 27.5px;
+	margin-left: 30px;
 	/*border: 1px solid black;*/
 	width: 125px;
 	height: 125px;
 	float: left;
 }
 
-.b-button,
-.a-button {
-	width: 70px;
-	height: 70px;
-}
-
-.middle-section {
-	width: 180px;
-	height: 100%;
-	float: left;
-	margin-left: 20px;
-}
-
-.gray-bar-top,
-.gray-bar {
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-.gray-bar,
-.gray-bar-bottom {
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-}
-
-.gray-bar, 
-.gray-bar-top {
-	width: 177.5px;
-	height: 27.5px;
-	background-color: #c5c5c5;
-	margin-bottom: 10px;
-}
-
-.bottom-gray-bar {
-	width: 177.5px;
-	height: 20px;
-	background-color: #c5c5c5;
-}
-
-.start-select-container {
-	width: 177.5px;
-	height: 62.5px;
-	border: 1px solid black;
-	border-radius: 5px;
-	margin-bottom: 10px;
-}
-
-div.select, div.start {
-	padding: 5px 7px;
-}
-
-.select {
-	float: left;
-}
-
-.start {
-	float: right
-}
-
-.select-btn {
-
-}
-
-.start-btn {
-	
-}
-
-
 #d-pad-border {
    width: 125px;
    height: 125px;
    margin: auto;
    position: relative;
+   z-index: 0;
 }
 
 #d-pad-border:before, #d-pad-border:after {
@@ -155,22 +102,22 @@ div.select, div.start {
 #d-pad-dimple {
 	width: 25px;
 	height: 25px;
-	border: 1px solid white;
+	border: 1px solid #c5c5c5;
 	position: absolute;
 	left: 44px;
 	top: 44px;
 	border-radius: 100px;
 }
 
-#d-pad-left {
+.d-pad-left {
 	 width: 16px;
 	 height: 20px;
-	 background: red;
+	 background: white;
 	 position: absolute;
 	 top: 48px;
 	 left: 16px;
 }
-#d-pad-left:before {
+.d-pad-left:before {
 	 content:"";
 	 position: absolute;
 	 right: 100%;
@@ -179,11 +126,12 @@ div.select, div.start {
 	 width: 0;
 	 height: 0;
 	 border-top: 15px solid transparent;
-	 border-right: 15px solid red;
+	 border-right: 15px solid white;
 	 border-bottom: 15px solid transparent;
+	 /*box-shadow: -1px -1px 10px -2px rgba(0,0,0,0.5);*/
 }
 
-#d-pad-right {
+.d-pad-right {
    width: 16px;
    height: 20px;
    background: red;
@@ -191,7 +139,7 @@ div.select, div.start {
    top: 48px;
    left: 81px;
 }
-#d-pad-right:before {
+.d-pad-right:before {
    content:"";
    position: absolute;
    right: 100%;
@@ -204,15 +152,15 @@ div.select, div.start {
    border-left: 15px solid red;
 }
 
-#d-pad-up {
+.d-pad-up {
    width: 20px;
    height: 17px;
-   background: red;
+   background: black;
    position: absolute;
    top: 16px;
-   left: 48px;
+   left: 49px;
 }
-#d-pad-up:before {
+.d-pad-up:before {
 	content:"";
 	position: absolute;
 	right: 100%;
@@ -222,18 +170,64 @@ div.select, div.start {
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-bottom: 15px solid red;
+	border-bottom: 15px solid black;
+
+}.d-pad-up-border {
+   width: 22px;
+   height: 17px;
+   background: gray;
+   position: absolute;
+   top: 17px;
+   left: 48px;
+   z-index: -1;
+}
+.d-pad-up-border:before {
+	content:"";
+	position: absolute;
+	right: 100%;
+	top: -14px;
+	left: -6px;
+	width: 0;
+	height: 0;
+	border-left: 17px solid transparent;
+	border-right: 17px solid transparent;
+	border-bottom: 17px solid gray;
 }
 
-#d-pad-down {
+
+.d-pad-down-border {
+	width: 22px;
+	height: 16px;
+	background: gray;
+	position: absolute;
+	top: 80px;
+	left: 48px;
+	z-index: -1;
+}
+
+.d-pad-down-border:before {
+	content:"";
+	position: absolute;
+	right: 100%;
+	top: 15px;
+	left: -6px;
+	width: 0;
+	height: 0;
+	border-left: 17px solid transparent;
+	border-right: 17px solid transparent;
+	border-top: 17px solid gray;
+}
+
+.d-pad-down {
 	width: 20px;
 	height: 17px;
-	background: red;
+	background: black;
 	position: absolute;
 	top: 81px;
-	left: 48px;
+	left: 49px;
 }
-#d-pad-down:before {
+
+.d-pad-down:before {
 	content:"";
 	position: absolute;
 	right: 100%;
@@ -243,6 +237,181 @@ div.select, div.start {
 	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-top: 15px solid red;
+	border-top: 15px solid black;
 }
 
+.b-a-button-section {
+	height: 113px;
+	float: left;
+	width: 170px;
+}
+
+.b-button-container,
+.a-button-container {
+	/*border: 1px solid white;*/
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 30px;
+	border-radius: 5px;
+	background-color: rgb(208,204,202);
+	/*position: relative;*/
+}
+
+.a-button-container {
+	margin-left: 20px;
+}
+
+.b-button,
+.a-button {
+	width: 52px;
+	height: 52px;
+	border-radius: 100%;
+	background-color: #D20014;
+	margin-top: 4px;
+	margin-left: 4px;
+	/*position: absolute;*/
+	/*float: left;*/
+}
+
+.select-start-section {
+	width: 180px;
+	height: 100%;
+	float: left;
+	margin-left: 30px;
+}
+
+.gray-bar-top,
+.gray-bar {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.gray-bar,
+.gray-bar-bottom {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.gray-bar, 
+.gray-bar-top {
+	width: 177.5px;
+	height: 27.5px;
+	background-color: rgb(120,120,120);
+	margin-bottom: 10px;
+}
+
+.gray-bar-bottom {
+	width: 177.5px;
+	height: 23px;
+	background-color: rgb(120,120,120);
+}
+
+/*.start-select-container {
+	width: 157.5px;
+	height: 43px;
+	border: 10px solid #c5c5c5;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}*/
+
+.start-select-container {
+  width: 177px;
+  height: 60px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 5px;
+  /*border: rgb(208,204,202) solid 8px;*/
+	margin-bottom: 10px;
+	background-color: rgb(208,204,202);
+	/*overflow: hidden;*/
+	position: relative;
+}
+
+.start-select-inner-container {
+	width: 165px;
+	height: 48px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: rgb(208,204,202);
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+.select-text,
+.start-text {
+	padding: 6px 7px;
+	color: #D20014;
+	font-family: 'pretendo';
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.select-text {
+	float: left;
+}
+
+.start-text {
+	float: right
+}
+
+.select-btn,
+.start-btn {
+	height: 20px;
+	width: 45;
+	border-radius: 5px;
+	background-color: black;
+	float: left;
+	margin-top: 13px;
+}
+
+.select-btn {
+	margin-left: 15px;
+}
+
+.start-btn {
+	margin-left: 40px;
+}
+
+.nintendo {
+	font-family: 'pretendo';
+	color: #D20014;
+	letter-spacing: 1px;
+	margin-top: 30px;
+	margin-left: 30px;
+	position: relative;
+}
+
+.reg {
+	font-family: sans-serif;
+	position: absolute;
+	top: -5px;
+}
+
+.btn-activate-up {
+	background-color: gray;
+}
+
+.btn-activate-up:before {
+	border-bottom: 15px solid gray;
+}
+
+.btn-activate-down {
+	background-color: gray;
+}
+
+.btn-activate-down:before {
+	border-top: 15px solid gray;
+}
+
+
+
+.button-text {
+	text-align: right;
+	padding: 5px 2px;
+}
+
+.ss-activate {
+	background-color: gray;
+}

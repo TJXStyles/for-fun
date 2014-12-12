@@ -10,41 +10,68 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    
   </head>
   <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-		<div class=container>
-			<div class=controller-body>		
-        <div class=d-pad-container>
+		<div class="container">
+			<div class="controller-body">		
+        <div class="d-pad-container">
           <div id="d-pad-border">
-              <div id='d-pad'>
+            <div id='d-pad'>
               <div id="d-pad-dimple"></div>
-              <div id="d-pad-left"></div>
-              <div id="d-pad-right"></div>
-              <div id="d-pad-up"></div>
-              <div id="d-pad-down"></div>
+              <div class="d-pad-left" data-button="left" value="left"></div>
+              <div class="d-pad-right" data-button="right" value="right"></div>
+              <div class="d-pad-up-border"></div>
+              <div class="d-pad-up" data-button="up" value="up"></div>
+              <div class="d-pad-up-border"></div>
+              <div class="d-pad-down" data-button="down" value="down"></div>
+              <div class="d-pad-down-border"></div>
             </div>
           </div>
         </div>
 
-        <div class='middle-section'>
+        <div class='select-start-section'>
           <div class="gray-bar-top"></div>
           <div class="gray-bar"></div>
           <div class="gray-bar">
             <div class="buttons">
-              <div class=select>Select</div>
-              <div class="start">Start</div>
+              <div class="select-text">SELECT</div>
+              <div class="start-text">START</div>
             </div>
           </div>
-          <div class="start-select-container"></div>
-          <div class="bottom-gray-bar"></div>
+          <div class="start-select-container">
+            <div class="start-select-inner-container">
+              <div class="select-btn" value="select" data-button="select"></div>
+              <div class="start-btn" value="start" data-button="start"></div>
+            </div>
+          </div>
+          <div class="gray-bar-bottom"></div>
         </div> 
-			</div>
-		</div>
 
+        <div class="b-a-button-section">
+          <div class="nintendo">
+            Nintendo<span class="reg">&#174;</span>
+          </div>
+        </div>
+
+        <div class="b-button-container">
+          <div class="b-button" data-button-b></div>
+          <div class="button-text">B</div>
+        </div>
+        <div class="a-button-container">
+          <div class="a-button" data-button-a></div>
+          <div class="button-text">A</div>
+        </div>
+
+		  </div> <!-- controller-body -->
+    </div> <!-- container -->
+    <div id="cheat-code" type="text"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
