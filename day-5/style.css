@@ -104,7 +104,7 @@ body {
 	height: 25px;
 	border: 1px solid #c5c5c5;
 	position: absolute;
-	left: 44px;
+	left: 45px;
 	top: 44px;
 	border-radius: 100px;
 }
@@ -173,7 +173,7 @@ body {
 }
 
 .d-pad-right-border {
-   width: 17px;
+   width: 18px;
    height: 22px;
    background: gray;
    position: absolute;
@@ -185,13 +185,13 @@ body {
    content:"";
    position: absolute;
    right: 100%;
-   top: -7px;
+   top: -6px;
    left: 14px;
    width: 0;
    height: 0;
-   border-top: 18px solid transparent;
-   border-bottom: 18px solid transparent;
-   border-left: 18px solid gray;
+   border-top: 17px solid transparent;
+   border-bottom: 17px solid transparent;
+   border-left: 17px solid gray;
 }
 
 .d-pad-up {
