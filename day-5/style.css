@@ -405,7 +405,16 @@ body {
 	border-top: 15px solid gray;
 }
 
-
+.d-pad-left,
+.d-pad-right,
+.d-pad-down,
+.d-pad-up,
+.select-btn,
+.start-btn,
+.b-button,
+.a-button {
+	cursor: pointer;
+}
 
 .button-text {
 	text-align: right;
@@ -414,4 +423,27 @@ body {
 
 .ss-activate {
 	background-color: gray;
+}
+
+.button-pressed {
+	background-color: #7E000C;
+}
+
+.cheat-code-area {
+	font-size: 30;
+	letter-spacing: 1px;
+}
+
+.cheat-message-wrong,
+.cheat-message-right {
+	font-size: 30;
+	display: none;
+}
+
+.reload {
+	cursor: pointer;
+}
+
+.normal {
+	font-family: sans-serif;
 }
