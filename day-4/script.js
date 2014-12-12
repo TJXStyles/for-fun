@@ -1,10 +1,10 @@
 $(function() {
-  // $('dd').addClass('hide');
   var $dl = $('dl');
-  $('dd').hide();
+  $('dd').addClass('hide');
   $dl.on('mouseenter', 'dt', function() {
     $(this)
       .next()
+        .removeClass('hide')
         .slideDown(200)
         .siblings('dd')
           .slideUp(200);
