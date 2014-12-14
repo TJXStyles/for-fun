@@ -288,14 +288,12 @@ body {
 
 .b-button-container,
 .a-button-container {
-	/*border: 1px solid white;*/
 	width: 60px;
 	height: 60px;
 	float: left;
 	margin-left: 30px;
 	border-radius: 5px;
 	background-color: rgb(208,204,202);
-	/*position: relative;*/
 }
 
 .a-button-container {
@@ -351,8 +349,8 @@ body {
 .start-select-container {
   width: 177px;
   height: 60px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
 	margin-bottom: 10px;
 	background-color: rgb(208,204,202);
