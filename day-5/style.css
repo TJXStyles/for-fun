@@ -29,7 +29,6 @@ body {
 .d-pad-container {
 	margin-top: 50px;
 	margin-left: 30px;
-	/*border: 1px solid black;*/
 	width: 125px;
 	height: 125px;
 	float: left;
@@ -109,7 +108,7 @@ body {
 	border-radius: 100px;
 }
 
-.d-pad-left {
+.left {
 	 width: 16px;
 	 height: 20px;
 	 background: black;
@@ -117,7 +116,7 @@ body {
 	 top: 48px;
 	 left: 16px;
 }
-.d-pad-left:before {
+.left:before {
 	 content:"";
 	 position: absolute;
 	 right: 100%;
@@ -151,7 +150,7 @@ body {
 	 border-bottom: 17px solid transparent;
 }
 
-.d-pad-right {
+.right {
    width: 16px;
    height: 20px;
    background: black;
@@ -159,7 +158,7 @@ body {
    top: 48px;
    left: 81px;
 }
-.d-pad-right:before {
+.right:before {
    content:"";
    position: absolute;
    right: 100%;
@@ -194,7 +193,7 @@ body {
    border-left: 17px solid gray;
 }
 
-.d-pad-up {
+.up {
    width: 20px;
    height: 17px;
    background: black;
@@ -202,7 +201,7 @@ body {
    top: 16px;
    left: 49px;
 }
-.d-pad-up:before {
+.up:before {
 	content:"";
 	position: absolute;
 	right: 100%;
@@ -236,7 +235,6 @@ body {
 	border-bottom: 17px solid gray;
 }
 
-
 .d-pad-down-border {
 	width: 22px;
 	height: 16px;
@@ -260,7 +258,7 @@ body {
 	border-top: 17px solid gray;
 }
 
-.d-pad-down {
+.down {
 	width: 20px;
 	height: 17px;
 	background: black;
@@ -269,7 +267,7 @@ body {
 	left: 49px;
 }
 
-.d-pad-down:before {
+.down:before {
 	content:"";
 	position: absolute;
 	right: 100%;
@@ -304,16 +302,17 @@ body {
 	margin-left: 20px;
 }
 
-.b-button,
-.a-button {
+.buttons {
+	text-transform: uppercase;
+}
+
+.b, .a {
 	width: 52px;
 	height: 52px;
 	border-radius: 100%;
 	background-color: #D20014;
 	margin-top: 4px;
 	margin-left: 4px;
-	/*position: absolute;*/
-	/*float: left;*/
 }
 
 .select-start-section {
@@ -349,24 +348,14 @@ body {
 	background-color: rgb(120,120,120);
 }
 
-/*.start-select-container {
-	width: 157.5px;
-	height: 43px;
-	border: 10px solid #c5c5c5;
-	border-radius: 5px;
-	margin-bottom: 10px;
-}*/
-
 .start-select-container {
   width: 177px;
   height: 60px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 5px;
-  /*border: rgb(208,204,202) solid 8px;*/
 	margin-bottom: 10px;
 	background-color: rgb(208,204,202);
-	/*overflow: hidden;*/
 	position: relative;
 }
 
@@ -398,21 +387,21 @@ body {
 	float: right
 }
 
-.select-btn,
-.start-btn {
+.select,
+.start {
 	height: 20px;
 	width: 45;
-	border-radius: 5px;
+	border-radius: 10px;
 	background-color: black;
 	float: left;
 	margin-top: 13px;
 }
 
-.select-btn {
+.select {
 	margin-left: 15px;
 }
 
-.start-btn {
+.start {
 	margin-left: 40px;
 }
 
@@ -421,8 +410,9 @@ body {
 	color: #D20014;
 	letter-spacing: 1px;
 	margin-top: 30px;
-	margin-left: 30px;
+	margin-left: 40px;
 	position: relative;
+	height: 83px;
 }
 
 .reg {
@@ -431,64 +421,69 @@ body {
 	top: -5px;
 }
 
-.btn-activate-up,
-.btn-activate-left,
-.btn-activate-down,
-.btn-activate-right  {
-	background-color: gray;
+.up-activate,
+.left-activate,
+.down-activate,
+.right-activate  {
+	background-color: #323232;
 }
 
-.btn-activate-up:before {
-	border-bottom: 15px solid gray;
+.up-activate:before {
+	border-bottom: 15px solid #323232;
 }
 
-.btn-activate-down:before {
-	border-top: 15px solid gray;
+.down-activate:before {
+	border-top: 15px solid #323232;
 }
 
-.btn-activate-right:before {
-	border-left: 15px solid gray;
+.right-activate:before {
+	border-left: 15px solid #323232;
 }
 
-.btn-activate-left:before {
-	border-right: 15px solid gray;
+.left-activate:before {
+	border-right: 15px solid #323232;
 }
 
-
-
-.d-pad-left,
-.d-pad-right,
-.d-pad-down,
-.d-pad-up,
-.select-btn,
-.start-btn,
-.b-button,
-.a-button {
+.left,
+.right,
+.down,
+.up,
+.select,
+.start,
+.b,
+.a {
 	cursor: pointer;
 }
 
 .button-text {
 	text-align: right;
 	padding: 5px 2px;
+	text-transform: uppercase;
 }
 
-.ss-activate {
-	background-color: gray;
+.ss-activate,
+.start-activate,
+.select-activate {
+	background-color: #323232;
 }
 
-.button-pressed {
+.button-activate,
+.a-activate,
+.b-activate {
 	background-color: #7E000C;
-}
-
-.cheat-code-area {
-	font-size: 30;
-	letter-spacing: 1px;
 }
 
 .cheat-message-wrong,
 .cheat-message-right {
-	font-size: 30;
 	display: none;
+}
+
+.cheat-code-area,
+.cheat-message-wrong,
+.cheat-message-right {
+	padding-top: 10px;
+	font-size: 20px;
+	font-family: 'Press Start 2P', cursive;
 }
 
 .reload {
