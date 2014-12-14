@@ -14,9 +14,8 @@ $(function() {
 
 // Function for comparing against cheat code
 	function codeConfirmed(array) {
-		var newArray = array.join(''),
-				codeArea = $('.cheat-code-area');
-		if (newArray == cheat) {
+		var newArray = array.join('');
+				if (newArray == cheat) {
 			cheatMsgRight.show();
 			setInterval(blink, 500);
 		} else {
